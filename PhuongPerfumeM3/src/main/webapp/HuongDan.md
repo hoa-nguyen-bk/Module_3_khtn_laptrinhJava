@@ -92,4 +92,14 @@ Phần đăng nhập theo mvc:
 	- trả về trang chủ
 	- hiển thị họ tên ở đầu trang nếu thành công, còn nếu thất bại thì thôi:
 		- `${sessionScope.nd.hoTen}`
-5. 
+### Đăng xuất: DangXuatServlet
+```
+HttpSession session = request.session();
+if(session!= null){
+	session.invalid();
+}
+//trả về trang chủ
+```
+- session.invalidate làm cho nó mất hiệu lực
+- session.removeAttribute: xóa thuộc tính thôi chứ ko muốn xóa biến session
+- sau đó bấm zô PhuongPerfumeM3 -> Run as Server -> nó sẽ hiển thị ra trang chủ
