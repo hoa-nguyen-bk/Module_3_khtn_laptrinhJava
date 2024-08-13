@@ -41,8 +41,8 @@ article {
 			<h2>Thực đơn</h2>
 			<ul>
 				<li><a href="chao.jsp">Chào</a></li>
-				<li><a href="btvn_3_4_upload-file">Upload</a></li>
-				<li><a href="#">Cộng 2 số</a></li>
+				<li><a href="btvn_3_4_upload-file2_template.jsp">Upload</a></li>
+				<li><a href="vd2_bienAn_cong-2-so2_template.jsp">Cộng 2 số</a></li> <%--Không hỗ trợ với file cộng 2 số --%>
 				<li><a href="#">Link 4</a></li>
 
 			</ul>
