@@ -60,7 +60,7 @@
 
 Note: nếu mà có đổi tên folder thì nên xóa máy chủ PhuongPerfumeM3 đi và chạy lại f11
 
-btvn:
+btvn - làm cho buổi sau:
 ----
 - làm thêm giỏ hàng
 - làm hiển thị tiền
@@ -70,3 +70,26 @@ btvn:
 - cái này giống đề thi
 - người ta cho cái trang sẵn, người ta sửa theo dữ liệu động of mình
 - phải tự làm sql
+
+
+# Buổi  2
+Phần đăng nhập theo mvc:
+
+### Model:
+1. Java bean: NguoiDung
+2. Business Logic: NguoiDungBL -> timNguoiDung(String,String) -> NguoiDung
+### View: 
+3. Sửa lại phần form đăng nhập ở cuối trang
+### Controller
+4. Tạo đăng nhập DangNhapServlet
+	- nhập email và password
+	- tìm người dùng: phải tìm ra đối tượng người dùng
+		- `NguoiDung nd = NguoiDungBL.timNguoiDung(email,pass);`
+		- chỗ này kiểm thử
+	- đặt người dùng lên session:
+		- `HttpSession session = request.getSession();`
+		- `session.setAttribute("nd",nd);`
+	- trả về trang chủ
+	- hiển thị họ tên ở đầu trang nếu thành công, còn nếu thất bại thì thôi:
+		- `${sessionScope.nd.hoTen}`
+5. 

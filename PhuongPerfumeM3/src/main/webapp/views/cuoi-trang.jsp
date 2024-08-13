@@ -36,13 +36,11 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Đăng nhập</h2>
-                        <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
-                            <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
-                            <li><a href="#">Gadets</a></li>
-                        </ul>                        
+                           <form action="DangNhapServlet" method="POST">
+                             <input type="email" name="email" placeholder="Nhập email 📧" />
+                             <input type="password" name="password" placeholder="Nhập password 🤦‍♂️" />
+                             <input type="submit" name="btnDangNhap" value="Đăng nhập nèo 😂" />
+                         </form>
                     </div>
                 </div>
                 
