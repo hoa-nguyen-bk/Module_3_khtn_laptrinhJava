@@ -14,7 +14,7 @@ public class CSDL {
     public static Connection LayKetNoi(){
         Connection con = null;
         try {
-            String url = "jdbc:mysql://localhost:3306/qlbansua?useUnicode=true&characterEncoding=UTF-8";
+            String url = "jdbc:mysql://localhost:3309/ql_bansua?useUnicode=true&characterEncoding=UTF-8";
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, "root", "");
         } catch (ClassNotFoundException | SQLException ex) {
