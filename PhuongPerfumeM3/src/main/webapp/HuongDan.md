@@ -94,12 +94,18 @@ Phần đăng nhập theo mvc:
 		- `${sessionScope.nd.hoTen}`
 ### Đăng xuất: DangXuatServlet
 ```
-HttpSession session = request.session();
-if(session!= null){
-	session.invalid();
-}
-//trả về trang chủ
+	HttpSession session = request.session();
+	if(session!= null){
+		session.invalid();
+	}
+	//trả về trang chủ
 ```
 - session.invalidate làm cho nó mất hiệu lực
 - session.removeAttribute: xóa thuộc tính thôi chứ ko muốn xóa biến session
 - sau đó bấm zô PhuongPerfumeM3 -> Run as Server -> nó sẽ hiển thị ra trang chủ
+
+### Thêm vào giỏ hàng
+
+Người ta tạo rất nhiều thông tin để lưu trong giỏ hàng, nên thầy sẽ chỉ cho mình lưu ít thôi, thầy sẽ cho mình lưu ít ít thông tin thôi, khi hiển thị lên đầy đủ họ lưu hình ảnh tên, số lượng, giá tổng tiền.
+Còn thầy lưu id, số lượng mua thôi, vì từ id ta lấy được tên, hình ảnh, giá khuyến mãi -> để làm thế ta cần cái hàm truyền vào id trả về sản phẩm, nên trong SanPhamBL ta sẽ bổ sung thêm hàm
+bây giờ thêm cái docTheoId

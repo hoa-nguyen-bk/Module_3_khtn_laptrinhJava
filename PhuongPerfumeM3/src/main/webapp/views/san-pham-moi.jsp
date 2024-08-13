@@ -17,8 +17,9 @@
 								<div class="product-f-image">
 									<img src="img/${sp.hinhAnh }" alt="">
 									<div class="product-hover">
-										<a href="#" class="add-to-cart-link"><i
-											class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</a> <a
+									<%--truyền idsp là sp.id và số lượng mua là 1 --%>
+										<a href="ThemVaoGioServlet?idsp=${sp.id }?slm=1" class="add-to-cart-link"><i
+											class="fa fa-shopping-cart"></i> Thêm vào giỏ</a> <a
 											href="single-product.html" class="view-details-link"><i
 											class="fa fa-link"></i> Xem chi tiết</a>
 									</div>
