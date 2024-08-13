@@ -1,0 +1,11 @@
+.metadata/**
+.metadata\**
+.metadata\*
+.metadata/*
+.metadata/
+.metadata\
+.metadata
+/build/
+\build\
+.metadata/.plugins/**
+.metadata\.plugins\*
