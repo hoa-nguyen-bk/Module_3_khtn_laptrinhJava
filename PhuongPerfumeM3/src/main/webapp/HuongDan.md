@@ -116,8 +116,14 @@ BTVN: cố gắng phát triển típ
 
 ### hiển thị giỏ hàng
 
-# Bài 5 Filter
 
+# Buổi 3:  Bài 5 Filter
+
+### làm típ cái bài Perfume + với đăng nhập  
 Bước 1: tạo bộ lọc ở Xác Thực Filter
 
 Bước 2: khai báo bộ lọc ở `src\main\webapp\WEB-INF\web.xml`
+
+Kiểm tra đã thành công, phải đăng nhập mới vô được giỏ hàng
+
+## Tiếp tục với BTVN MVC
