@@ -126,4 +126,15 @@ Bước 2: khai báo bộ lọc ở `src\main\webapp\WEB-INF\web.xml`
 
 Kiểm tra đã thành công, phải đăng nhập mới vô được giỏ hàng
 
-## Tiếp tục với BTVN MVC
+## Tiếp tục với BTVN MVC bài 4.1 và 4.2
+Publisher MVC
+- Model:
+	1. Lấy cái file `minishop.sql` và file  hibernate
+	2. Business logic: PublisherBL
+		```
+		docTatCa() -> List<Publisher>
+		docTheoId(int id) -> Publisher
+		add(Publisher p) -> p
+		edit(Publisher p) -> p
+		```
+B2: tạo view 
