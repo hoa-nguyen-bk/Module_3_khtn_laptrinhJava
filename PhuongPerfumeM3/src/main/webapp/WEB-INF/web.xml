@@ -4,4 +4,30 @@
   <welcome-file-list>
     <welcome-file>trang-chu.jsp</welcome-file>
   </welcome-file-list>
+  <!-- khai báo thêm ne -->
+  <session-config>
+  	<session-timeout>30</session-timeout>
+  </session-config>
+  <!-- Khai báo bộ lọc, bộ chứa sẽ lấy ra kiểm tra, sau này mình lấy bất kì đường dẫn nào mà đi vào test thì nó sẽ in cái uri ra -->
+  <filter>
+  	<filter-name>vd1</filter-name>
+  	<filter-class>filters.Vd1Filter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>vd1</filter-name>
+  	<!-- tất cả mọi đường dẫn phải qua test/* -->
+  	<url-pattern>/test/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+  	<filter-name>LocXacThuc</filter-name>
+  	<filter-class>filters.XacThucFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<!-- gắn vào bộ chứa để bộ chứa lo -->
+  	<filter-name>LocXacThuc</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  
 </web-app>

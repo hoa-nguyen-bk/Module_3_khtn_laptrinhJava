@@ -3,6 +3,11 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+    
+    <fmt:setLocale value="vi-VN"/>
+    
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -38,7 +43,27 @@
                                 <ins>$700.00</ins> <del>$800.00</del>
                             </div>                             
                         </div>
-                        
+                        <div class="thubmnail-recent">
+                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$700.00</ins> <del>$800.00</del>
+                            </div>                             
+                        </div>
+                        <div class="thubmnail-recent">
+                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$700.00</ins> <del>$800.00</del>
+                            </div>                             
+                        </div>
+                        <div class="thubmnail-recent">
+                            <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
+                            <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
+                            <div class="product-sidebar-price">
+                                <ins>$700.00</ins> <del>$800.00</del>
+                            </div>                             
+                        </div>
                     </div>
                 </div>
                 
@@ -58,35 +83,38 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    	<c:forEach items="${sessionScope.gioHang.layDanhSachSanPhamMua() }" var="spm">
+
                                         <tr class="cart_item">
                                             <td class="product-remove">
                                                 <a title="Remove this item" class="remove" href="#">×</a> 
                                             </td>
 
                                             <td class="product-thumbnail">
-                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/product-thumb-2.jpg"></a>
+                                                <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/${spm.hinhAnh }"></a>
                                             </td>
 
                                             <td class="product-name">
-                                                <a href="single-product.html">Ship Your Idea</a> 
+                                                <a href="single-product.html">${spm.tenSanPham }</a> 
                                             </td>
 
                                             <td class="product-price">
-                                                <span class="amount">£15.00</span> 
+                                                <span class="amount"><fmt:formatNumber value="${spm.donGiaKM }" var="donGiaKM"/> ${donGiaKM } đ</span> 
                                             </td>
 
                                             <td class="product-quantity">
                                                 <div class="quantity buttons_added">
                                                     <input type="button" class="minus" value="-">
-                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="${spm.soLuongMua }" min="0" step="1">
                                                     <input type="button" class="plus" value="+">
                                                 </div>
                                             </td>
 
                                             <td class="product-subtotal">
-                                                <span class="amount">£15.00</span> 
+                                                <span class="amount"><fmt:formatNumber value="${spm.thanhTien() }" var="thanhTien"/> ${thanhTien } đ</span> 
                                             </td>
                                         </tr>
+                                                                            	</c:forEach>
                                         <tr>
                                             <td class="actions" colspan="6">
                                                 <div class="coupon">
@@ -111,7 +139,7 @@
                                     <tbody>
                                         <tr class="cart-subtotal">
                                             <th>Cộng thành tiền</th>
-                                            <td><span class="amount">£15.00</span></td>
+                                            <td><span class="amount">${sessionScope.gioHang.tongTien() } đ</span></td>
                                         </tr>
 
                                         <tr class="shipping">
@@ -121,7 +149,7 @@
 
                                         <tr class="order-total">
                                             <th>Tổng cộng</th>
-                                            <td><strong><span class="amount">£15.00</span></strong> </td>
+                                            <td><strong><span class="amount">${sessionScope.gioHang.tongTien() } đ </span></strong> </td>
                                         </tr>
                                     </tbody>
                                 </table>

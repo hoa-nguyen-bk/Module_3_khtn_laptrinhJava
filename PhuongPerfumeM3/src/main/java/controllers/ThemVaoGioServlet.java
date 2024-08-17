@@ -13,42 +13,47 @@ import businessLogics.GioHang;
 /**
  * Servlet implementation class GioHangServlet
  */
-@WebServlet("/GioHangServlet")
+@WebServlet("/ThemVaoGioServlet")
 public class ThemVaoGioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ThemVaoGioServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ThemVaoGioServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// dựa vào cái tham số truyền vào
 		int idSanPham, soLuongMua;
 		idSanPham = Integer.parseInt(request.getParameter("idsp"));
 		soLuongMua = Integer.parseInt(request.getParameter("slm"));
 		HttpSession session = request.getSession();
 		GioHang gioHang = (GioHang) session.getAttribute("gioHang");
-		if(gioHang==null) {
-			gioHang=new GioHang();
+		if (gioHang == null) {
+			gioHang = new GioHang();
 			session.setAttribute("gioHang", gioHang);
 		}
 		gioHang.them(idSanPham, soLuongMua);
 		// sau khi thêm xong thì quay về trang chủ
 		response.sendRedirect("trang-chu.jsp");
-		//khi quay về trang chủ thì phải hiển thị họ tên người đăng nhập, tổng hàng và tổng tiến
+		// khi quay về trang chủ thì phải hiển thị họ tên người đăng nhập, tổng hàng và
+		// tổng tiến
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

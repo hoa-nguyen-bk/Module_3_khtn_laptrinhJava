@@ -107,5 +107,17 @@ Phần đăng nhập theo mvc:
 ### Thêm vào giỏ hàng
 
 Người ta tạo rất nhiều thông tin để lưu trong giỏ hàng, nên thầy sẽ chỉ cho mình lưu ít thôi, thầy sẽ cho mình lưu ít ít thông tin thôi, khi hiển thị lên đầy đủ họ lưu hình ảnh tên, số lượng, giá tổng tiền.
+
 Còn thầy lưu id, số lượng mua thôi, vì từ id ta lấy được tên, hình ảnh, giá khuyến mãi -> để làm thế ta cần cái hàm truyền vào id trả về sản phẩm, nên trong SanPhamBL ta sẽ bổ sung thêm hàm
+
 bây giờ thêm cái docTheoId
+
+BTVN: cố gắng phát triển típ
+
+### hiển thị giỏ hàng
+
+# Bài 5 Filter
+
+Bước 1: tạo bộ lọc ở Xác Thực Filter
+
+Bước 2: khai báo bộ lọc ở `src\main\webapp\WEB-INF\web.xml`

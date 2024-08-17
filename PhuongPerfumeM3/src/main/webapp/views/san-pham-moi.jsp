@@ -18,7 +18,7 @@
 									<img src="img/${sp.hinhAnh }" alt="">
 									<div class="product-hover">
 									<%--truyền idsp là sp.id và số lượng mua là 1 --%>
-										<a href="ThemVaoGioServlet?idsp=${sp.id }?slm=1" class="add-to-cart-link"><i
+										<a href="ThemVaoGioServlet?idsp=${sp.id}&slm=1" class="add-to-cart-link"><i
 											class="fa fa-shopping-cart"></i> Thêm vào giỏ</a> <a
 											href="single-product.html" class="view-details-link"><i
 											class="fa fa-link"></i> Xem chi tiết</a>
@@ -30,8 +30,8 @@
 								</h2>
 
 								<div class="product-carousel-price">
-									<ins>$${sp.donGiaKM }</ins>
-									<del>$${sp.donGia }</del>
+									<ins>${sp.donGiaKM } đ</ins>
+									<del>${sp.donGia } đ</del>
 								</div>
 							</div>
 						</c:forEach>
