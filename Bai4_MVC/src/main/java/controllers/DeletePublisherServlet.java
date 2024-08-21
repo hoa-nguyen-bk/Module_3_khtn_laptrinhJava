@@ -28,6 +28,7 @@ public class DeletePublisherServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String[] midXoa = request.getParameterValues("idXoa");
 		int id = Integer.parseInt(request.getParameter("id"));
 		PublisherBL.del(id);
 		response.sendRedirect("PublisherServlet");
