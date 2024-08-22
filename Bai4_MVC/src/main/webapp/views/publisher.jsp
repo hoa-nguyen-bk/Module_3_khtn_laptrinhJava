@@ -14,6 +14,7 @@
 	<p>
 		<a href="AddPublisherServlet">Add new Publisher</a>
 	</p>
+	<%--Xóa nhiều:  DeletePublisherServlet  --%>
 	<form action="DeletePublisherServlet" method="post">
 
 		<table border="1">

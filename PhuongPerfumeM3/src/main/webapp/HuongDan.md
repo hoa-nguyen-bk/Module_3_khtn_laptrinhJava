@@ -138,3 +138,5 @@ Publisher MVC
 		edit(Publisher p) -> p
 		```
 B2: tạo view 
+Hiện tại mình đang làm MVC của Java not MVC của Spring, nhớ nhen
+BTVN: Bài tập bài4 mvc :  4.3 Home
