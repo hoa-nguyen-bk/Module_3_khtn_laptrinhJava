@@ -1,5 +1,5 @@
 package entity;
-// Generated Aug 22, 2024, 6:14:50 PM by Hibernate Tools 4.3.6.Final
+// Generated Aug 24, 2024, 4:44:16 PM by Hibernate Tools 4.3.6.Final
 
 import java.util.Date;
 import java.util.HashSet;
