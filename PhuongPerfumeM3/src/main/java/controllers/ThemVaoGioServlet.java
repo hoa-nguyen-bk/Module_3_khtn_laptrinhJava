@@ -42,8 +42,9 @@ public class ThemVaoGioServlet extends HttpServlet {
 			session.setAttribute("gioHang", gioHang);
 		}
 		gioHang.them(idSanPham, soLuongMua);
+		response.getWriter().print(gioHang.tongTien()+"/"+gioHang.tinhSoMatHang());
 		// sau khi thêm xong thì quay về trang chủ
-		response.sendRedirect("trang-chu.jsp");
+//		response.sendRedirect("trang-chu.jsp");
 		// khi quay về trang chủ thì phải hiển thị họ tên người đăng nhập, tổng hàng và
 		// tổng tiến
 	}

@@ -73,7 +73,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="trang-gio-hang.jsp">Giỏ hàng: <span class="cart-amunt">${sessionScope.gioHang.tongTien() } đ</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">${sessionScope.gioHang.tinhSoMatHang() }</span></a>
+                        <a href="trang-gio-hang.jsp">Giỏ hàng: <span id="tongTien" class="cart-amunt">${sessionScope.gioHang.tongTien() } đ</span> <i class="fa fa-shopping-cart"></i> <span id="soMatHang" class="product-count">${sessionScope.gioHang.tinhSoMatHang() }</span></a>
                     </div>
                 </div>
             </div>

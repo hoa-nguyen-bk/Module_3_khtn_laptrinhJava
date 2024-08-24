@@ -1,6 +1,7 @@
 <%-- 
     Document   : san-pham-moi
 --%>
+<script src="js/themVaoGio.js"></script>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="maincontent-area">
@@ -18,8 +19,12 @@
 									<img src="img/${sp.hinhAnh }" alt="">
 									<div class="product-hover">
 									<%--truyền idsp là sp.id và số lượng mua là 1 --%>
-										<a href="ThemVaoGioServlet?idsp=${sp.id}&slm=1" class="add-to-cart-link"><i
-											class="fa fa-shopping-cart"></i> Thêm vào giỏ</a> <a
+										<!-- 
+										 <a href="ThemVaoGioServlet?idsp=${sp.id}&slm=1" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a>
+										 -->
+										<a href="javascript:themVaoGio('${sp.id}','1')" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ</a> 
+											
+											<a
 											href="single-product.html" class="view-details-link"><i
 											class="fa fa-link"></i> Xem chi tiết</a>
 									</div>
