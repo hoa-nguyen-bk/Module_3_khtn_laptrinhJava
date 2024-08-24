@@ -83,16 +83,16 @@ public class AuthorBL {
 
 //		Author at = getAuthor(1);
 //		System.out.println(at.getAuthorName() + " - " + at.getAuthorId());
-//		
+
 //		Author newAt = new Author();
 //		newAt.setAuthorName("hòa minzy hihi");
 //		addAuthor(newAt);
-	
-//		Author author = getAuthor(100);
+//	
+//		Author author = getAuthor(105);
 //		author.setAuthorName("bees bi");
 //		editAuthor(author);
 
-		deleteAuthor(100);
+		deleteAuthor(106);
 	}
 
 }

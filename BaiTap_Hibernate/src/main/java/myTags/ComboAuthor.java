@@ -22,6 +22,7 @@ public class ComboAuthor extends SimpleTagSupport {
 			f.invoke(out);
 		}
 		out.print("<select name='cboAuthor'>");
+		//lấy cái nội dung ra
 		for(Author at:authors) {
 			out.print("<option value='"+at.getAuthorId()+"'>"+at.getAuthorName()+"</option>");
 		}
