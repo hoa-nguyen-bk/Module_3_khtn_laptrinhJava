@@ -1,4 +1,4 @@
-<%@page import="businessLogics.CSDL"%>
+<%@page import="businessLogics.Database"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
@@ -9,12 +9,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Loại sữa C1</title>
-<%!
-	Connection ketNoi = CSDL.getCon();
+<%!Connection ketNoi = Database.getCon();
 	Statement stm;
 	ResultSet rs;
-	String sql="select * from loai_sua";
-%>
+	String sql="select * from loai_sua";%>
 <%
 	stm = ketNoi.createStatement();
 	rs = stm.executeQuery(sql);

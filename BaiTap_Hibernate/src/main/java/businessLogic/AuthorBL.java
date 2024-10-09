@@ -19,7 +19,7 @@ public class AuthorBL {
 	}
 
 	public static Author getAuthor(int id) {
-// cách cũ
+		// cách cũ
 		// String sql = "SELECT at FROM Author at WHERE authorid = "+id;
 		try (Session session = CSDL.getFactory().openSession()) {
 			return session.get(Author.class, id);
